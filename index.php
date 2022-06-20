@@ -8,4 +8,4 @@ $input_path = readline('Введите путь к входящему файлу
 $output_path = readline('Введите путь для выгружаемого файла: ');
 $tree = New Tree;
 $tree->createJson(CSV::openCSV($input_path), $output_path);
-echo 'Всё прошло успешно';
+echo "Всё прошло успешно \n";

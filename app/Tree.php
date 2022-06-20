@@ -17,11 +17,11 @@ class Tree
             }
         }
         Dir::clearDir('containers/');
-        if(pathinfo($path)['extension'] == null)
+        if(@pathinfo($path)['extension'] == null)
         {
             $path .= '.json';
         }
-        if(pathinfo($path)['extension'] != 'json')
+        if(@pathinfo($path)['extension'] != 'json')
         {
             $path = preg_replace("/\..*/",'.json',$path);
         }

@@ -49,7 +49,7 @@ class Tree
                 $i++;
             }
         }
-        return $result;
+        return @$result;
     }
 
     public function getRelationGroup($relation, &$data, $parent)

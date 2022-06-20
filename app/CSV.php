@@ -13,7 +13,7 @@ class CSV
         $fh = @fopen($path, "r");
         if($fh == false)
         {
-            die('Не правильный путь до файла');
+            die("Не правильный путь до файла \n");
         }
         fgetcsv($fh, 0, ',');
 

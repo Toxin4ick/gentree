@@ -15,3 +15,18 @@ while (($row = fgetcsv($fh, 0, ';')) !== false) {
 
     ];
 }
+
+function title(&$data)
+{
+    foreach ($data as $row) {
+        if ($row['parent'] == null) {
+            $result = [
+                'ItemName' => $row['name'],
+                'parent' => null,
+                'children' => child($row['name'], $data),
+            ];
+            $final_result[] = $result;
+        }
+    }
+    return $final_result;
+}
